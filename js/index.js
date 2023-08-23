@@ -44,6 +44,11 @@ inquirer
   .prompt([
     {
       type: "Input",
+      name: "projectProfileUrl",
+      message: "Please provide your GitHub Url:",
+    },
+    {
+      type: "Input",
       name: "projectTitle",
       message: "Please provide you project title:",
     },
@@ -98,8 +103,8 @@ inquirer
     },
     {
       type: "Input",
-      name: "projectContribution",
-      message: "Please explain how users can contribute to your project:",
+      name: "projectEmail",
+      message: "Please your Email Address:",
     },
   ])
   .then((answers) => {
