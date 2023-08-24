@@ -124,7 +124,6 @@ ${answers.projectDescription}
 - [Credits](#credits)
 - [License](#License)
 
-
 ## Installation
 
 ## Usage
