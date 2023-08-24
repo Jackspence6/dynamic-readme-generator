@@ -117,7 +117,6 @@ inquirer
 ${answers.projectDescription}
 
 ## Table of Contents
-
 - [Installation](#Installation)
 - [Usage](#usage)
 - [Features](#features)
@@ -133,6 +132,7 @@ ${answers.projectDescription}
 ## Features
 
 ## Contributing
+If you would like to contribute to this project. Please email me at ${answers.projectEmail}. If you would like to contribute to future projects, please follow me at ${answers.projectProfileUrl}.
 
 ## Credits
 
