@@ -139,4 +139,12 @@ ${answers.projectDescription}
 ## License
 
 `;
+    // Writing README from user data
+    fs.writeFile("README.md", userReadmeData, (err) => {
+      if (err) {
+        console.error("An error occurred while writing the file:", err);
+        return;
+      }
+      console.log("README.md has been created successfully!");
+    });
   });
