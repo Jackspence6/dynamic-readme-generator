@@ -63,25 +63,25 @@ inquirer
       type: "input",
       name: "projectFeatures",
       message:
-        "Please provide you a list of your project's Features:(Separate each feature with a semi-colon)",
+        "Please provide you a list of your project's Features:(Separate each feature with a semi-colon(;))",
     },
     {
       type: "input",
       name: "projectInstallation",
       message:
-        "Please provide the steps required to install your application: (Separate each step with a semi-colon)",
+        "Please provide the steps required to install your application: (Separate each step with a semi-colon(;))",
     },
     {
       type: "input",
       name: "projectUsage",
       message:
-        "Please provide the usage steps for your application: (Separate each step with a semi-colon)",
+        "Please provide the usage steps for your application: (Separate each step with a semi-colon(;))",
     },
     {
       type: "input",
       name: "projectCredits",
       message:
-        "Please provide a list of people who contributed to your project, if any: (Separate each contributor with a semi-colon)",
+        "Please provide a list of people who contributed to your project, if any: (Separate each contributor with a semi-colon(;))",
     },
     {
       type: "list",
