@@ -136,7 +136,7 @@ If you would like to contribute to this project. Please email me at ${answers.pr
 ## Credits
 
 ## License
-
+This project is licensed under the ${answers.projectLicense} - see the [LICENSE.md](LICENSE.md) file for details.
 `;
     // Writing README from user data
     fs.writeFile("README.md", userReadmeData, (err) => {
