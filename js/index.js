@@ -6,7 +6,6 @@ import { error, log } from "console";
 import inquirer from "inquirer";
 // Importing "fs" to application
 import fs from "fs";
-import { features } from "process";
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
@@ -14,31 +13,34 @@ import { features } from "process";
 /******************************************/
 /* Function Declarations */
 /******************************************/
+// Function to write the README file taking in answers as the parameter
 function writeFile(answers) {
   // Formatting Project Installation and splitting them at the semi-colon
   let formattedInstallation = "";
   answers.projectInstallation.split(";").forEach((installation) => {
     formattedInstallation += `${installation}\n`;
   });
-  return formattedInstallation;
   // Formatting Project Usage and splitting them at the semi-colon
   let formattedUsage = "";
   answers.projectUsage.split(";").forEach((usage) => {
     formattedUsage += `${usage}\n`;
   });
-  return formattedUsage;
   // Formatting Project features and splitting them at the semi-colon
   let formattedFeatures = "";
   answers.projectFeatures.split(";").forEach((features) => {
     formattedFeatures += `${features}\n`;
   });
-  return formattedFeatures;
   // Formatting Project Credits and splitting them at the semi-colon
   let formattedCredits = "";
   answers.projectCredits.split(";").forEach((Credits) => {
     formattedCredits += `${Credits}\n`;
   });
-  return formattedCredits;
+  return {
+    formattedInstallation,
+    formattedUsage,
+    formattedFeatures,
+    formattedCredits,
+  };
 }
 /******************************************/
 /* Class Declarations */
@@ -137,15 +139,13 @@ inquirer
   ])
   .then((answers) => {
     console.log(answers);
-    // Assigning new formatted answers to constants
-    // Installation Const
-    const formattedInstallation = writeFile(answers);
-    // Usage Const
-    const formattedUsage = writeFile(answers);
-    // Features Const
-    const formattedFeatures = writeFile(answers);
-    // Credits Const
-    const formattedCredits = writeFile(answers);
+    // Assigning & destructuring new formatted answers to constants
+    const {
+      formattedInstallation,
+      formattedUsage,
+      formattedFeatures,
+      formattedCredits,
+    } = writeFile(answers);
 
     // Adding user data to README
     const userReadmeData = `
