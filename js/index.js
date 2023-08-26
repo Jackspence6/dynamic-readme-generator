@@ -21,10 +21,13 @@ function writeFile(answers) {
     formattedInstallation += `${index + 1}: ${installation}\n`;
   });
   // Formatting Project Usage and splitting them at the semi-colon
-  let formattedUsage = "";
+  // Initializing usage steps with opening triple backticks and a newline
+  let formattedUsage = "```\n";
   answers.projectUsage.split(";").forEach((usage) => {
     formattedUsage += `${usage}\n`;
   });
+  // Appending usage steps with closing triple backticks
+  formattedUsage += "```";
   // Formatting Project features and splitting them at the semi-colon
   let formattedFeatures = "";
   answers.projectFeatures.split(";").forEach((features) => {
@@ -139,6 +142,8 @@ inquirer
   ])
   .then((answers) => {
     console.log(answers);
+    // Debug log
+    console.log("Output of writeFile:", writeFile(answers));
     // Assigning & destructuring new formatted answers to constants
     const {
       formattedInstallation,
