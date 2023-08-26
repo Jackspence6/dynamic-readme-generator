@@ -149,8 +149,8 @@ inquirer
 
     // Adding user data to README
     const userReadmeData = `
-  # ${answers.projectTitle}
-    ${answers.projectDescription}
+# ${answers.projectTitle}
+  ${answers.projectDescription}
 
   ## Table of Contents
   - [Installation](#Installation)
@@ -160,23 +160,23 @@ inquirer
   - [Credits](#credits)
   - [License](#License)
 
-  ## Installation
-  ${formattedInstallation}
+## Installation
+${formattedInstallation}
 
-  ## Usage
-  ${formattedUsage}
+## Usage
+${formattedUsage}
 
-  ## Features
-  ${formattedFeatures}
+## Features
+${formattedFeatures}
 
-  ## Contributing
-  If you would like to contribute to this project. Please email me at ${answers.projectEmail}. If you would like to contribute to future projects, please follow me at ${answers.projectProfileUrl}.
+## Contributing
+If you would like to contribute to this project. Please email me at ${answers.projectEmail}. If you would like to contribute to future projects, please follow me at ${answers.projectProfileUrl}.
 
-  ## Credits
-  ${formattedCredits}
+## Credits
+${formattedCredits}
 
-  ## License
-  This project is licensed under the ${answers.projectLicense} - see the [LICENSE.md](LICENSE.md) file for details.
+## License
+This project is licensed under the ${answers.projectLicense} - see the [LICENSE.md](LICENSE.md) file for details.
 `;
     // Writing README from user data
     fs.writeFile("README.md", userReadmeData, (err) => {
