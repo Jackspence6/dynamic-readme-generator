@@ -15,10 +15,10 @@ import fs from "fs";
 /******************************************/
 // Function to write the README file taking in answers as the parameter
 function writeFile(answers) {
-  // Formatting Project Installation and splitting them at the semi-colon
+  // Formatting Project Installation and splitting them at the semi-colon & adding a number before each installation step
   let formattedInstallation = "";
-  answers.projectInstallation.split(";").forEach((installation) => {
-    formattedInstallation += `${installation}\n`;
+  answers.projectInstallation.split(";").forEach((installation, index) => {
+    formattedInstallation += `${index + 1}: ${installation}\n`;
   });
   // Formatting Project Usage and splitting them at the semi-colon
   let formattedUsage = "";
