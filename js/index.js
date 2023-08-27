@@ -159,10 +159,10 @@ inquirer
 
   ## Table of Contents
   - [Installation](#Installation)
-  - [Usage](#usage)
-  - [Features](#features)
-  - [How to Contribute](#how-to-contribute)
-  - [Credits](#credits)
+  - [Usage](#Usage)
+  - [Features](#Features)
+  - [How to Contribute](#Contributing)
+  - [Credits](#Credits)
   - [License](#License)
 
 ## Installation
