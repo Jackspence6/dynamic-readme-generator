@@ -18,7 +18,7 @@ function writeFile(answers) {
   // Formatting Project Installation and splitting them at the semi-colon & adding a number before each installation step
   let formattedInstallation = "";
   answers.projectInstallation.split(";").forEach((installation, index) => {
-    formattedInstallation += `${index + 1}: ${installation}\n`;
+    formattedInstallation += `${index + 1}. ${installation}\n`;
   });
   // Formatting Project Usage and splitting them at the semi-colon
   // Initializing usage steps with opening triple backticks and a newline
@@ -31,12 +31,12 @@ function writeFile(answers) {
   // Formatting Project features and splitting them at the semi-colon
   let formattedFeatures = "";
   answers.projectFeatures.split(";").forEach((features) => {
-    formattedFeatures += `${features}\n`;
+    formattedFeatures += `- ${features}\n`;
   });
   // Formatting Project Credits and splitting them at the semi-colon
   let formattedCredits = "";
   answers.projectCredits.split(";").forEach((Credits) => {
-    formattedCredits += `${Credits}\n`;
+    formattedCredits += `- ${Credits}\n`;
   });
   return {
     formattedInstallation,
@@ -78,12 +78,12 @@ inquirer
     {
       type: "input",
       name: "projectProfileUrl",
-      message: "Please provide your GitHub Url:",
+      message: "Please provide your GitHub Profile Url:",
     },
     {
       type: "input",
       name: "projectTitle",
-      message: "Please provide you project title:",
+      message: "Please provide your project title:",
     },
     {
       type: "input",
@@ -94,7 +94,7 @@ inquirer
       type: "input",
       name: "projectFeatures",
       message:
-        "Please provide you a list of your project's Features:(Separate each feature with a semi-colon(;))",
+        "Please provide a list of your project's Features:(Separate each feature with a semi-colon(;))",
     },
     {
       type: "input",
@@ -137,7 +137,7 @@ inquirer
     {
       type: "input",
       name: "projectEmail",
-      message: "Please your Email Address:",
+      message: "Please provide your Email Address:",
     },
   ])
   .then((answers) => {
