@@ -152,8 +152,19 @@ inquirer
       formattedCredits,
     } = writeFile(answers);
 
+    // Assigning Project License choice to licenseStr
+    const licenseStr = answers.projectLicense;
+    // Extracting the first word from the String
+    const licenseWord = licenseStr.split(" ")[0];
+    // Logging the first word from the string to the console
+    console.log(licenseWord);
+    // License badge URL to generate badge
+    const licenseBadgeURL = `https://img.shields.io/badge/License-${licenseWord}-blue.svg`;
+
     // Adding user data to README
     const userReadmeData = `
+![License Badge](${licenseBadgeURL})
+
 # ${answers.projectTitle}
   ${answers.projectDescription}
 
@@ -181,8 +192,8 @@ If you would like to contribute to this project. Please email me at ${answers.pr
 ${formattedCredits}
 
 ## License
-This project is licensed under the ${answers.projectLicense} - see the [LICENSE.md](LICENSE.md) file for details.
-`;
+This project is licensed under the ${licenseStr}. See the [LICENSE.md](LICENSE.md) file for details.`;
+
     // Writing README from user data
     fs.writeFile("README.md", userReadmeData, (err) => {
       if (err) {
